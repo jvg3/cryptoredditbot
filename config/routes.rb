@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'coins#index'
 end
