@@ -1,0 +1,11 @@
+<div>
+
+  Coin mention counts:
+  <br>
+
+  <% @coins_with_count.each do |coin| %>
+    <%= "#{coin.sym}: #{coin.count}" %>
+    <br>
+  <% end %>
+
+</div>
