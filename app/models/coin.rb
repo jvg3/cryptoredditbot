@@ -2,7 +2,7 @@ class Coin < ActiveRecord::Base
 
   def self.seed_coins
     Coin.sym_list.each do |sym|
-      Coin.find_or_create_by(name: sym[:name], sym: sym[:sym])
+      Coin.find_or_create_by(name: sym[:name].upcase, sym: sym[:sym].upcase)
     end
   end
 
