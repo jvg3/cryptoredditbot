@@ -1,7 +1,13 @@
+.coins-index {
+  display: flex;
+  .table-wrap {
+    flex: 1;
+  }
+}
+
 .table-wrap {
-  border: 1px solid;
-  margin: 0 20px;
   padding: 40px;
+  margin: 0 20px;
   tr:nth-of-type(2n) {
     background-color: #f3f3f3;
   }
