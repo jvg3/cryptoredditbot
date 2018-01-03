@@ -1,0 +1,12 @@
+.table-wrap.mentions {
+  .comment-wrap {
+    max-height: 200px;
+    overflow: auto;
+  }
+  td {
+    padding: 10px 0;
+  }
+  td:nth-of-type(3) {
+    width: 50%;
+  }
+}

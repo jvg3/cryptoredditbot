@@ -13,7 +13,7 @@ class RedditAdapter
       if match
         coin = Coin.find_by_sym(match.to_s)
         coin = Coin.find_by_name(match.to_s) unless coin
-        Mention.create(coin_id: coin.id) if coin
+        Mention.create(coin_id: coin.id, comment: comment) if coin
       end
     end
   end

@@ -1,5 +1,7 @@
 class Coin < ActiveRecord::Base
 
+  has_many :mentions
+
   def self.seed_coins
     Coin.sym_list.each do |sym|
       Coin.find_or_create_by(name: sym[:name].upcase, sym: sym[:sym].upcase)

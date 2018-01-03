@@ -1,11 +1,53 @@
 <div>
 
-  Coin mention counts:
-  <br>
+  Coin mention counts:<br><br>
 
-  <% @coins_with_count.each do |coin| %>
-    <%= "#{coin.sym}: #{coin.count}" %>
-    <br>
-  <% end %>
+  <div class="table-wrap" style="display: inline-block;">
+    1 Hour<br><br>
+    <table>
+      <tr>
+        <th>sym</th>
+        <th>count</th>
+      </tr>
+      <% @one_hour_mentions.each do |coin| %>
+        <tr>
+          <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
+          <td><%= "#{coin.count}" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="table-wrap" style="display: inline-block;">
+    1 Day<br><br>
+    <table>
+      <tr>
+        <th>sym</th>
+        <th>count</th>
+      </tr>
+      <% @one_day_mentions.each do |coin| %>
+        <tr>
+          <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
+          <td><%= "#{coin.count}" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="table-wrap" style="display: inline-block;">
+    1 Week<br><br>
+    <table>
+      <tr>
+        <th>sym</th>
+        <th>count</th>
+      </tr>
+      <% @seven_day_mentions.each do |coin| %>
+        <tr>
+          <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
+          <td><%= "#{coin.count}" %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 
 </div>
