@@ -2,6 +2,15 @@
   display: flex;
   .table-wrap {
     flex: 1;
+    td {
+      padding: 5px 10px;
+    }
+  }
+  .green {
+    color: green;
+  }
+  .red {
+    color: red;
   }
 }
 
