@@ -35,7 +35,7 @@
         <tr>
           <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
           <td><%= "#{coin.count}" %></td>
-          <td class=<%= "hour-#{coin.sym}" %>></td>
+          <td class=<%= "day-#{coin.sym}" %>></td>
         </tr>
       <% end %>
     </table>
@@ -53,7 +53,7 @@
         <tr>
           <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
           <td><%= "#{coin.count}" %></td>
-          <td class=<%= "hour-#{coin.sym}" %>></td>
+          <td class=<%= "week-#{coin.sym}" %>></td>
         </tr>
       <% end %>
     </table>
