@@ -11,12 +11,14 @@
       <tr>
         <th>sym</th>
         <th>count</th>
+        <th>Price/USD</th>
         <th>% G/L</th>
       </tr>
       <% @one_hour_mentions.each do |coin| %>
         <tr>
           <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
           <td><%= "#{coin.count}" %></td>
+          <td class=<%= "price-#{coin.sym}" %>></td>
           <td class=<%= "hour-#{coin.sym}" %>></td>
         </tr>
       <% end %>
@@ -29,12 +31,14 @@
       <tr>
         <th>sym</th>
         <th>count</th>
+        <th>Price/USD</th>
         <th>% G/L</th>
       </tr>
       <% @one_day_mentions.each do |coin| %>
         <tr>
           <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
           <td><%= "#{coin.count}" %></td>
+          <td class=<%= "price-#{coin.sym}" %>></td>
           <td class=<%= "day-#{coin.sym}" %>></td>
         </tr>
       <% end %>
@@ -47,12 +51,14 @@
       <tr>
         <th>sym</th>
         <th>count</th>
+        <th>Price/USD</th>
         <th>% G/L</th>
       </tr>
       <% @seven_day_mentions.each do |coin| %>
         <tr>
           <td><%= link_to "#{coin.sym}", mentions_path(coin: coin.sym) %></td>
           <td><%= "#{coin.count}" %></td>
+          <td class=<%= "price-#{coin.sym}" %>></td>
           <td class=<%= "week-#{coin.sym}" %>></td>
         </tr>
       <% end %>

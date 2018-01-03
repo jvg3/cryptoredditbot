@@ -7,26 +7,27 @@ Coin.init = function() {
     success: function (data) {
       $.each(data, function (key, value) {
 
-        $('.hour-' + value.symbol).html(value.percent_change_1h)
-        $('.day-' + value.symbol).html(value.percent_change_7d)
-        $('.week-' + value.symbol).html(value.percent_change_24h)
+        $('.price-' + value.symbol).html(value.price_usd);
+        $('.hour-' + value.symbol).html(value.percent_change_1h);
+        $('.day-' + value.symbol).html(value.percent_change_7d);
+        $('.week-' + value.symbol).html(value.percent_change_24h);
 
         if (parseFloat(value.percent_change_1h) < 0) {
-          $('.hour-' + value.symbol).addClass('red')
+          $('.hour-' + value.symbol).addClass('red');
         } else {
-          $('.hour-' + value.symbol).addClass('green')
+          $('.hour-' + value.symbol).addClass('green');
         }
 
         if (parseFloat(value.percent_change_7d) < 0) {
-          $('.day-' + value.symbol).addClass('red')
+          $('.day-' + value.symbol).addClass('red');
         } else {
-          $('.day-' + value.symbol).addClass('green')
+          $('.day-' + value.symbol).addClass('green');
         }
 
         if (parseFloat(value.percent_change_24h) < 0) {
-          $('.week-' + value.symbol).addClass('red')
+          $('.week-' + value.symbol).addClass('red');
         } else {
-          $('.week-' + value.symbol).addClass('green')
+          $('.week-' + value.symbol).addClass('green');
         }
 
       });
