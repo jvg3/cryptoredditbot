@@ -8,6 +8,16 @@ class Coin < ActiveRecord::Base
     end
   end
 
+  def self.refresh_coins
+    res = HTTP.get('https://api.coinmarketcap.com/v1/ticker/')
+    if res.status == 200
+      json = JSON.parse(res.to_s)
+      json.each do |coin|
+        Coin.find_or_create_by(sym: coin['symbol'], name: coin['name'].upcase)
+      end
+    end
+  end
+
   def self.sym_list
     [
     { name: 'Bitcoin', sym: 'BTC' },
