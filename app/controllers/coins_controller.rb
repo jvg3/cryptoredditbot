@@ -38,7 +38,7 @@ class CoinsController < ApplicationController
     source_clause = "AND mentions.source = ?" if source
 
     sql = <<-SQL
-      SELECT count(*), coins.sym
+      SELECT count(*), AVG(mentions.sentiment), coins.sym
       FROM mentions
       LEFT JOIN coins ON coins.id = mentions.coin_id
       WHERE mentions.created_at > ?
@@ -53,5 +53,4 @@ class CoinsController < ApplicationController
     Mention.find_by_sql([sql].concat(params_arr))
 
   end
-
 end

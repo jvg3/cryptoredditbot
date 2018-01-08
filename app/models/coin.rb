@@ -5,21 +5,11 @@ class Coin < ActiveRecord::Base
   has_many :mentions
 
   def self.sources
-    ['reddit_bitcoin', 'reddit_cryptocurrency', 'reddit_ico']
-  end
-
-  def self.sources
     sources = {
       reddit_cryptocurrency: 'https://www.reddit.com/r/cryptocurrency/comments.json',
       reddit_bitcoin: 'https://www.reddit.com/r/bitcoin/comments.json',
       reddit_ico: 'https://www.reddit.com/r/icocrypto/comments.json'
     }
-  end
-
-  def self.seed_coins
-    Coin.sym_list.each do |sym|
-      Coin.find_or_create_by(name: sym[:name].upcase, sym: sym[:sym].upcase)
-    end
   end
 
   def self.refresh_coins
