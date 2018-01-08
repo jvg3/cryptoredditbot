@@ -4,6 +4,20 @@
   });
 </script>
 
+<div>
+  <form action="/coins.json" class="add-coin">
+    <div class="input-wrap">
+      <div>SYM:</div>
+      <input id="sym" type="text">
+    </div>
+    <div class="input-wrap">
+      <div>NAME:</div>
+      <input id="name" type="text">
+    </div>
+    <button type="submit">Add Coin</button>
+  </form>
+</div>
+
 <div class="coins-index">
   <div class="table-wrap" style="display: inline-block;">
     1 Hour<br><br>
@@ -64,18 +78,4 @@
       <% end %>
     </table>
   </div>
-</div>
-
-<div>
-  <form action="/coins.json" class="add-coin">
-    <div class="input-wrap">
-      <div>SYM:</div>
-      <input id="sym" type="text">
-    </div>
-    <div class="input-wrap">
-      <div>NAME:</div>
-      <input id="name" type="text">
-    </div>
-    <button type="submit">Add Coin</button>
-  </form>
 </div>
