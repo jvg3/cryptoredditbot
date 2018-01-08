@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'http'
 gem 'highcharts-rails'
 gem 'bourbon'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'

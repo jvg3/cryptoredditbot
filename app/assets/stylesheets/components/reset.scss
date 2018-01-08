@@ -1,0 +1,98 @@
+html,
+body {
+    color: $theme-dk-gray-3;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    @include appearance(none);
+    background: transparent;
+    border: 0;
+}
+
+a {
+    color: inherit;
+}
+
+a,
+button,
+textarea {
+    outline: none;
+}
+
+svg {
+    display: block;
+    font-family: 'Open Sans';
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.noclick {
+  pointer-events: none;
+}
+
+.modal {
+  max-height: inherit;
+}
+
+.sortable {
+  cursor: ns-resize;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.nopointer {
+  cursor: default !important;
+}
+
+.nocursor {
+  cursor: not-allowed !important;
+}
+
+.noselect {
+  @include user-select(none);
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 10px;
+}

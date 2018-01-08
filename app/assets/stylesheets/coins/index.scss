@@ -1,35 +1,57 @@
 .coins-index {
-  display: flex;
-  .table-wrap {
-    flex: 1;
-    td {
-      padding: 5px 10px;
+  .coins-table-wrap {
+    display: flex;
+    .table-wrap {
+      flex: 1;
+      td {
+        padding: 5px 10px;
+      }
+    }
+    .green {
+      color: white;
+      background-color: $theme-green;
+    }
+    .red {
+      color: white;
+      background-color: $theme-red;
     }
   }
-  .green {
-    color: green;
-  }
-  .red {
-    color: red;
-  }
-}
 
-.table-wrap {
-  padding: 40px;
-  margin: 0 20px;
-  tr:nth-of-type(2n) {
-    background-color: #f3f3f3;
+  .table-wrap {
+    padding: 40px;
+    .tr:nth-of-type(2n) {
+      background-color: #f3f3f3;
+    }
   }
-}
 
+  .add-coin-link {
+    cursor: pointer;
+    font-weight: bold;
+    color: $theme-md-yellow;
+    .fa {
+      margin: 0 10px;
+    }
+  }
 
-form {
-  margin-top: 80px;
-  margin-left: 60px;
-  .input-wrap {
-    div {
-      display: inline-block;
-      width: 60px;
+  .add-coin-link,
+  form {
+    margin-left: 40px;
+  }
+
+  form {
+    width: 200px;
+    .input-wrap {
+      margin-bottom: 10px;
+      div {
+        display: inline-block;
+        width: 60px;
+      }
+    }
+    .submit-button {
+      background-color: $theme-md-yellow;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
   }
 }

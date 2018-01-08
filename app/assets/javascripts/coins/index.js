@@ -5,6 +5,7 @@ Coin.init = function() {
     method: 'GET',
     url: 'https://api.coinmarketcap.com/v1/ticker/',
     success: function (data) {
+      console.log('coinbase success');
       $.each(data, function (key, value) {
 
         $('.price-' + value.symbol).html(value.price_usd);
@@ -39,7 +40,7 @@ Coin.init = function() {
     }
   });
 
-  $('form.add-coin').on('submit', (e) => {
+  $('form.add-coin-form').on('submit', (e) => {
     e.preventDefault();
 
     $.ajax({
@@ -56,5 +57,10 @@ Coin.init = function() {
         alert(error.responseText);
       }
     });
-  })
+  });
+
+  $('.add-coin-link').on('click', (e) => {
+    $('.add-coin-link').addClass('hidden');
+    $('.add-coin-form').removeClass('hidden');
+  });
 }
