@@ -41,6 +41,9 @@ GEM
     arel (6.0.4)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
+    bourbon (3.2.4)
+      sass (~> 3.2)
+      thor
     builder (3.2.3)
     byebug (9.1.0)
     coffee-rails (4.1.1)
@@ -172,6 +175,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   highcharts-rails

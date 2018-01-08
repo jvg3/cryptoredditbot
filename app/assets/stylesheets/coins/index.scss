@@ -21,3 +21,14 @@
     background-color: #f3f3f3;
   }
 }
+
+
+form {
+  margin-left: 60px;
+  .input-wrap {
+    div {
+      display: inline-block;
+      width: 60px;
+    }
+  }
+}

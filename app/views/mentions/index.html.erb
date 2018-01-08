@@ -7,13 +7,15 @@
         <tr>
           <th>id</th>
           <th>created_at</th>
+          <th>post</th>
           <th>comment</th>
         </tr>
         <% @mentions.each do |mention| %>
-          <tr>
-            <td><%= "#{mention.id}" %></td>
-            <td><%= "#{mention.created_at}" %></td>
-            <td ><div class="comment-wrap"><%= "#{mention.comment}" %></div></td>
+          <tr class='fx-row'>
+            <td class='fx-1'><%= mention.id %></td>
+            <td class='fx-1'><%= mention.created_at %></td>
+            <td class='fx-1'><%= link_to mention.post_title, "https://www.reddit.com#{mention.url}", target: "_blank" %></td>
+            <td class='fx-1'><div class="comment-wrap"><%= mention.comment %></div></td>
           </tr>
         <% end %>
       </table>

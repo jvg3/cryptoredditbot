@@ -35,7 +35,26 @@ Coin.init = function() {
     },
     error: function(jxHR) {
       console.log(jxHR);
-      alert.log('coinbase api link hella broke');
+      alert('u broke coinbase??');
     }
+  });
+
+  $('form.add-coin').on('submit', (e) => {
+    e.preventDefault();
+
+    $.ajax({
+      method: 'POST',
+      url: '/coins.json',
+      data: {
+        sym: $('#sym').val(),
+        name: $('#name').val()
+      },
+      success: (data) => {
+        alert('cool');
+      },
+      error: (error) => {
+        alert(error.responseText);
+      }
+    });
   })
 }

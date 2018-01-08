@@ -1,0 +1,143 @@
+// .fx-row {
+
+//     @include display(flex);
+//     @include flex-flow(row nowrap !important);
+
+//     @media #{$small-and-down} {
+//         @include flex-flow(row wrap !important);
+//     }
+
+//     &.fx-vt {
+//         @include align-items(flex-start !important);
+//     }
+
+//     &.fx-vc {
+//         @include align-items(center !important);
+//     }
+
+//     &.fx-vb {
+//         @include align-items(flex-end !important);
+//     }
+
+//     &.fx-vsb {
+//         @include align-items(space-between !important);
+//     }
+
+//     &.fx-vsa {
+//         @include align-items(space-around !important);
+//     }
+
+//     &.fx-hl {
+//         @include justify-content(flex-start !important);
+//     }
+
+//     &.fx-hc {
+//         @include justify-content(center !important);
+//     }
+
+//     &.fx-hr {
+//         @include justify-content(flex-end !important);
+//     }
+
+//     &.fx-hsb {
+//         @include justify-content(space-between !important);
+//     }
+
+//     &.fx-hsa {
+//         @include justify-content(space-around !important);
+//     }
+// }
+
+// .fx-col {
+//     @include display(flex);
+//     @include flex-flow(column nowrap !important);
+
+//     @media #{$small-and-down} {
+//         @include flex-flow(column wrap !important);
+//     }
+
+//     &.fx-vt {
+//         @include justify-content(flex-start !important);
+//     }
+
+//     &.fx-vc {
+//         @include justify-content(center !important);
+//     }
+
+//     &.fx-vb {
+//         @include justify-content(flex-end !important);
+//     }
+
+//     &.fx-vsb {
+//         @include justify-content(space-between !important);
+//     }
+
+//     &.fx-vsa {
+//         @include justify-content(space-around !important);
+//     }
+
+//     &.fx-hl {
+//         @include align-items(flex-start !important);
+//     }
+
+//     &.fx-hc {
+//         @include align-items(center !important);
+//     }
+
+//     &.fx-hr {
+//         @include align-items(flex-end !important);
+//     }
+
+//     &.fx-hsb {
+//         @include align-items(space-between !important);
+//     }
+
+//     &.fx-hsa {
+//         @include align-items(space-around !important);
+//     }
+// }
+
+// .fx-expand {
+//     height: 100% !important;
+//     width: 100% !important;
+// }
+
+// .fx-expand-w {
+//     width: 100% !important;
+// }
+
+// .fx-expand-h {
+//     height: 100% !important;
+// }
+
+// .fx-wrap {
+//     @include flex-wrap(wrap !important);
+// }
+
+// .fx-auto {
+//     @include flex(0 0 auto !important);
+// }
+
+// .fx-1 {
+//     @include flex(1 !important);
+// }
+
+// .fx-2 {
+//     @include flex(2 !important);
+// }
+
+// .fx-3 {
+//     @include flex(3 !important);
+// }
+
+// .fx-4 {
+//     @include flex(4 !important);
+// }
+
+// .fx-5 {
+//     @include flex(5 !important);
+// }
+
+// .fx-6 {
+//     @include flex(6 !important);
+// }

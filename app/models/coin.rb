@@ -1,5 +1,7 @@
 class Coin < ActiveRecord::Base
 
+  validates_uniqueness_of :sym
+  validates_presence_of :sym, :name
   has_many :mentions
 
   def self.seed_coins
