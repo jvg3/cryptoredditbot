@@ -4,7 +4,7 @@ class CoinsController < ApplicationController
 
     now = Time.now.utc
 
-    source = params[:source] if Coin.sources.include?(params[:source])
+    source = params[:source] if params[:source] && Coin.sources.keys.include?(params[:source].to_sym)
     @one_hour_mentions = mentions_from_date(now - 1.hour, source)
     @one_day_mentions = mentions_from_date(now - 1.day, source)
     @seven_day_mentions = mentions_from_date(now - 1.week, source)

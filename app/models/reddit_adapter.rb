@@ -1,11 +1,7 @@
 class RedditAdapter
 
   def self.get_reddit_data
-    sources = {
-      reddit_cryptocurrency: 'https://www.reddit.com/r/cryptocurrency/comments.json',
-      reddit_bitcoin: 'https://www.reddit.com/r/bitcoin/comments.json'
-    }
-    sources.each do |source, subreddit|
+    Coin.sources.each do |source, subreddit|
       self.get_subreddit_data(source, subreddit)
     end
   end

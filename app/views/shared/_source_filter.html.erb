@@ -1,5 +1,6 @@
 <select class="source-filter">
   <option value="all">All Sources</option>
-  <option value="reddit_bitcoin">/r/bitcoin</option>
-  <option value="reddit_cryptocurrency">/r/cryptocurrency</option>
+  <% Coin.sources.keys.each do |source| %>
+    <option value="<%= "#{source}"%>"><%= "#{source}"%></option>
+  <% end %>
 </select>
