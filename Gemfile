@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.18'
 
@@ -16,6 +18,7 @@ gem 'highcharts-rails'
 gem 'bourbon'
 gem "font-awesome-rails"
 gem "materialize-sass"
+gem "sidekiq-cron"
 
 group :development, :test do
   gem 'byebug'
