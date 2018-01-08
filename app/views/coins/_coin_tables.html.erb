@@ -20,8 +20,8 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% senitment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(senitment*10).to_i}" %>"><%= "#{senitment.round(2)}" %></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
           <div class="td center <%= "hour-#{coin.sym}" %>"></div>
         </div>
@@ -50,8 +50,8 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% senitment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(senitment*10).to_i}" %>"><%= "#{senitment.round(2)}" %></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
           <div class="td center <%= "day-#{coin.sym}" %>"></div>
         </div>
@@ -80,8 +80,8 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% senitment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(senitment*10).to_i}" %>"><%= "#{senitment.round(2)}" %></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
           <div class="td center <%= "week-#{coin.sym}" %>"></div>
         </div>
