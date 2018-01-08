@@ -1,5 +1,6 @@
 .coins-index {
   .coins-table-wrap {
+    width: 100%;
     display: flex;
     .table-wrap {
       flex: 1;
@@ -29,19 +30,16 @@
   .add-coin-link {
     cursor: pointer;
     font-weight: bold;
+    margin-bottom: 40px;
     color: $theme-md-yellow;
     .fa {
       margin: 0 10px;
     }
   }
 
-  .add-coin-link,
   form {
-    margin-left: 40px;
-  }
-
-  form {
-    width: 200px;
+    width: 300px;
+    margin-bottom: 40px;
     .input-wrap {
       margin-bottom: 10px;
       div {
@@ -55,5 +53,11 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+  }
+
+  .source-filter {
+    margin-left: 40px;
+    width: 200px;
+    border-radius: none;
   }
 }

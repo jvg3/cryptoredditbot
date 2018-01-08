@@ -59,8 +59,17 @@ Coin.init = function() {
     });
   });
 
-  $('.add-coin-link').on('click', (e) => {
+  $('.add-coin-link').off('click').on('click', (e) => {
     $('.add-coin-link').addClass('hidden');
     $('.add-coin-form').removeClass('hidden');
   });
+
+  $('.source-filter').off('change').on('change', (e) => {
+    console.log("ON CHANGE")
+    var source = e.target.value;
+    $.ajax({
+      url: '/coins.js?source=' + source,
+      method: 'get'
+    });
+  })
 }

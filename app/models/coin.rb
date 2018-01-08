@@ -4,6 +4,10 @@ class Coin < ActiveRecord::Base
   validates_presence_of :sym, :name
   has_many :mentions
 
+  def self.sources
+    ['reddit_bitcoin', 'reddit_cryptocurrency']
+  end
+
   def self.seed_coins
     Coin.sym_list.each do |sym|
       Coin.find_or_create_by(name: sym[:name].upcase, sym: sym[:sym].upcase)

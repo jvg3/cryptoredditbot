@@ -4,9 +4,16 @@ class CoinsController < ApplicationController
 
     now = Time.now.utc
 
-    @one_hour_mentions = mentions_from_date(now - 1.hour)
-    @one_day_mentions = mentions_from_date(now - 1.day)
-    @seven_day_mentions = mentions_from_date(now - 1.week)
+    source = params[:source] if Coin.sources.include?(params[:source])
+    @one_hour_mentions = mentions_from_date(now - 1.hour, source)
+    @one_day_mentions = mentions_from_date(now - 1.day, source)
+    @seven_day_mentions = mentions_from_date(now - 1.week, source)
+
+    respond_to do |format|
+      format.html
+      format.js {  render layout: false, file: "coins/index.js.erb" }
+    end
+
   end
 
   def create
@@ -24,21 +31,26 @@ class CoinsController < ApplicationController
         end
       end
     end
-
   end
 
-  def mentions_from_date(date)
+  def mentions_from_date(date, source=nil)
+
+    source_clause = "AND mentions.source = ?" if source
 
     sql = <<-SQL
       SELECT count(*), coins.sym
       FROM mentions
       LEFT JOIN coins ON coins.id = mentions.coin_id
       WHERE mentions.created_at > ?
+      #{source_clause}
       GROUP BY coins.sym
       ORDER BY count DESC
     SQL
 
-    Mention.find_by_sql([sql, date])
+    params_arr = [date]
+    params_arr << source if source
+
+    Mention.find_by_sql([sql].concat(params_arr))
 
   end
 

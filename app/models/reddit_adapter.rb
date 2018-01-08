@@ -1,10 +1,19 @@
 class RedditAdapter
 
   def self.get_reddit_data
-    coin_regexes = Coin.all.map{ |coin| Regexp.union([/\b#{coin.sym}\b/, /\b#{coin.sym}\b/]) }
+    sources = {
+      reddit_cryptocurrency: 'https://www.reddit.com/r/cryptocurrency/comments.json',
+      reddit_bitcoin: 'https://www.reddit.com/r/bitcoin/comments.json'
+    }
+    sources.each do |source, subreddit|
+      self.get_subreddit_data(source, subreddit)
+    end
+  end
 
-    # https://www.reddit.com/r/pics/search.json?sort=new
-    res = HTTP.get('https://www.reddit.com/r/cryptocurrency/comments.json')
+  def self.get_subreddit_data(source, subreddit)
+    coin_regexes = Coin.all.map{ |coin| Regexp.union([/\b#{coin.sym}\b/, /\b#{coin.name}\b/]) }
+
+    res = HTTP.get(subreddit)
     json = JSON.parse(res.to_s)
     comments = json['data']['children'].map{ |x| x['data'] }
     comments.each do |comment_json|
@@ -16,6 +25,7 @@ class RedditAdapter
           coin = Coin.find_by_sym(match.to_s.strip)
           coin = Coin.find_by_name(match.to_s.strip) unless coin
           Mention.create(
+            source: source,
             coin_id: coin.id,
             comment: comment_json['body'],
             post_title: comment_json['link_title'],

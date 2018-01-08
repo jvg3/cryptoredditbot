@@ -15,6 +15,7 @@ gem 'http'
 gem 'highcharts-rails'
 gem 'bourbon'
 gem "font-awesome-rails"
+gem "materialize-sass"
 
 group :development, :test do
   gem 'byebug'

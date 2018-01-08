@@ -1,0 +1,82 @@
+<div class="fx-row coins-table-wrap">
+  <div class="table-wrap fx-1">
+    <div class="header-primary">1 Hour</div>
+    <div class="fx-table nobox">
+      <div class="thead">
+        <div class="tr">
+          <div class="td center">SYM</div>
+          <div class="td center">COUNT</div>
+          <div class="td center">Price/USD</div>
+          <div class="td center">% G/L</div>
+        </div>
+      </div>
+      <% @one_hour_mentions.each do |coin| %>
+        <div class="tr">
+          <div class="td center">
+            <%= link_to(mentions_path(coin: coin.sym)) do %>
+              <span><%= "#{coin.sym}" %></span>
+              <i class="fa fa-eye" style='margin: 0 10px;'></i>
+            <% end %>
+          </div>
+          <div class="td center"><%= "#{coin.count}" %></div>
+          <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <div class="td center <%= "hour-#{coin.sym}" %>"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="table-wrap fx-1">
+    <div class="header-primary">1 Day</div>
+    <div class="fx-table nobox">
+      <div class="thead">
+        <div class="tr">
+          <div class="td center">SYM</div>
+          <div class="td center">COUNT</div>
+          <div class="td center">Price/USD</div>
+          <div class="td center">% G/L</div>
+        </div>
+      </div>
+      <% @one_day_mentions.each do |coin| %>
+        <div class="tr">
+          <div class="td center">
+            <%= link_to(mentions_path(coin: coin.sym)) do %>
+              <span><%= "#{coin.sym}" %></span>
+              <i class="fa fa-eye" style='margin: 0 10px;'></i>
+            <% end %>
+          </div>
+          <div class="td center"><%= "#{coin.count}" %></div>
+          <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <div class="td center <%= "day-#{coin.sym}" %>"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="table-wrap fx-1">
+    <div class="header-primary">1 Week</div>
+    <div class="fx-table nobox">
+      <div class="thead">
+        <div class="tr">
+          <div class="td center">SYM</div>
+          <div class="td center">COUNT</div>
+          <div class="td center">Price/USD</div>
+          <div class="td center">% G/L</div>
+        </div>
+      </div>
+      <% @seven_day_mentions.each do |coin| %>
+        <div class="tr">
+          <div class="td center">
+            <%= link_to(mentions_path(coin: coin.sym)) do %>
+              <span><%= "#{coin.sym}" %></span>
+              <i class="fa fa-eye" style='margin: 0 10px;'></i>
+            <% end %>
+          </div>
+          <div class="td center"><%= "#{coin.count}" %></div>
+          <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <div class="td center <%= "week-#{coin.sym}" %>"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

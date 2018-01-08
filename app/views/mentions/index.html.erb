@@ -7,6 +7,7 @@
           <div class="thead">
             <div class="tr">
               <div class="td fx-1 center">Created</div>
+              <div class="td fx-2 center">Source</div>
               <div class="td fx-2 center">Post</div>
               <div class="td fx-4 center">Comment</div>
             </div>
@@ -14,6 +15,7 @@
           <% @mentions.each do |mention| %>
             <div class="tr fx-row">
               <div class="td fx-1"><%= mention.created_at %></div>
+              <div class="td fx-1"><%= mention.source %></div>
               <div class="td fx-2"><%= link_to mention.post_title, "https://www.reddit.com#{mention.url}", target: "_blank" %></div>
               <div class="td fx-4"><div class="comment-wrap"><%= mention.comment %></div></div>
             </div>
