@@ -6,8 +6,8 @@
         <div class="tr">
           <div class="td center">SYM</div>
           <div class="td center">COUNT</div>
-          <div class="td center">:) or :(</div>
           <div class="td center">Price/USD</div>
+          <div class="td center">:) or :(</div>
           <div class="td center">% G/L</div>
         </div>
       </div>
@@ -20,9 +20,9 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% sentiment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{(sentiment*100).round}" %></div>
           <div class="td center <%= "hour-#{coin.sym}" %>"></div>
         </div>
       <% end %>
@@ -36,8 +36,8 @@
         <div class="tr">
           <div class="td center">SYM</div>
           <div class="td center">COUNT</div>
-          <div class="td center">:) or :(</div>
           <div class="td center">Price/USD</div>
+          <div class="td center">:) or :(</div>
           <div class="td center">% G/L</div>
         </div>
       </div>
@@ -50,9 +50,9 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% sentiment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{(sentiment*100).round}" %></div>
           <div class="td center <%= "day-#{coin.sym}" %>"></div>
         </div>
       <% end %>
@@ -66,8 +66,8 @@
         <div class="tr">
           <div class="td center">SYM</div>
           <div class="td center">COUNT</div>
-          <div class="td center">:) or :(</div>
           <div class="td center">Price/USD</div>
+          <div class="td center">:) or :(</div>
           <div class="td center">% G/L</div>
         </div>
       </div>
@@ -80,9 +80,9 @@
             <% end %>
           </div>
           <div class="td center"><%= "#{coin.count}" %></div>
-          <% sentiment = coin.avg || 0 %>
-          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{sentiment.round(2)}" %></div>
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
+          <% sentiment = coin.avg || 0 %>
+          <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{(sentiment*100).round}" %></div>
           <div class="td center <%= "week-#{coin.sym}" %>"></div>
         </div>
       <% end %>
