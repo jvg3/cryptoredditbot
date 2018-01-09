@@ -4,6 +4,7 @@ class RedditAdapter
     Coin.sources.each do |source, subreddit|
       self.get_subreddit_data(source, subreddit)
     end
+    SentimentWorker.perform_async
   end
 
   def self.get_subreddit_data(source, subreddit)
