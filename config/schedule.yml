@@ -1,7 +1,7 @@
 reddit_worker:
   cron: "*/5 * * * *"
   class: "RedditWorker"
-  queue: critical
+  queue: default
 
 # sentiment_worker:
 #   cron: "7 * * * *"

@@ -25,6 +25,8 @@ class RedditAdapter
             source: source,
             coin_id: coin.id,
             comment: comment_json['body'],
+            sentiment: 0.5,
+            sentiment_set: false,
             post_title: comment_json['link_title'],
             url: comment_json['permalink']) if coin
         end
