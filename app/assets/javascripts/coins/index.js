@@ -16,13 +16,13 @@ Coin.init = function() {
 
         $('.price-' + value.symbol).html(value.price_usd);
         $('.hour-' + value.symbol).html(value.percent_change_1h + '%');
-        $('.day-' + value.symbol).html(value.percent_change_7d + '%');
-        $('.week-' + value.symbol).html(value.percent_change_24h + '%');
+        $('.day-' + value.symbol).html(value.percent_change_24h + '%');
+        $('.week-' + value.symbol).html(value.percent_change_7d + '%');
 
         var floats = [
           parseFloat(value.percent_change_1h),
+          parseFloat(value.percent_change_24h),
           parseFloat(value.percent_change_7d),
-          parseFloat(value.percent_change_24h)
         ]
 
         floats = $.map(floats, (val) => {
@@ -36,32 +36,12 @@ Coin.init = function() {
         $('.day-' + value.symbol).addClass('score score-' + floats[1]);
         $('.week-' + value.symbol).addClass('score score-' + floats[2]);
 
-        // console.log(res);
-
-        // if (parseFloat(value.percent_change_1h) < 0) {
-        //   $('.hour-' + value.symbol).addClass('red');
-        // } else {
-        //   $('.hour-' + value.symbol).addClass('green');
-        // }
-
-        // if (parseFloat(value.percent_change_7d) < 0) {
-        //   $('.day-' + value.symbol).addClass('red');
-        // } else {
-        //   $('.day-' + value.symbol).addClass('green');
-        // }
-
-        // if (parseFloat(value.percent_change_24h) < 0) {
-        //   $('.week-' + value.symbol).addClass('red');
-        // } else {
-        //   $('.week-' + value.symbol).addClass('green');
-        // }
-
       });
 
     },
     error: function(jxHR) {
       console.log(jxHR);
-      alert('u broke coinbase??');
+      console.log('u broke coinbase??');
     }
   });
 

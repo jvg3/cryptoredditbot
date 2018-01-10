@@ -51,7 +51,7 @@
           <div class="td center <%= "price-#{coin.sym}" %>"></div>
           <% sentiment = coin.avg || 0 %>
           <div class="td center score score-<%= "#{(sentiment*10).to_i}" %>"><%= "#{(sentiment*100).round}" %></div>
-          <div class="td center <%= "day-#{coin.sym}" %>"></div>
+          <div class="td center <%= "day-#{coin.sym}" %>">...</div>
         </div>
       <% end %>
     </div>
