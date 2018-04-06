@@ -9,7 +9,8 @@ class Coin < ActiveRecord::Base
       reddit_cryptocurrency: 'https://www.reddit.com/r/cryptocurrency/comments.json',
       reddit_bitcoin: 'https://www.reddit.com/r/bitcoin/comments.json',
       reddit_ico: 'https://www.reddit.com/r/icocrypto/comments.json',
-      reddit_altcoin: 'https://www.reddit.com/r/altcoin/comments.json'
+      reddit_altcoin: 'https://www.reddit.com/r/altcoin/comments.json',
+      reddit_the_donald: 'https://www.reddit.com/r/the_donald/comments.json'
     }
   end
 
