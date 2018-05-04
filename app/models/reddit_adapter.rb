@@ -4,7 +4,7 @@ class RedditAdapter
     Coin.sources.each do |source, subreddit|
       self.get_subreddit_data(source, subreddit)
     end
-    SentimentWorker.perform_async
+    # SentimentWorker.perform_async
   end
 
   def self.get_subreddit_data(source, subreddit)
@@ -25,6 +25,7 @@ class RedditAdapter
             source: source,
             coin_id: coin.id,
             comment: comment_json['body'],
+            comment_id: comment_json['id'],
             sentiment: 0.5,
             sentiment_set: false,
             post_title: comment_json['link_title'],

@@ -1,5 +1,5 @@
 reddit_worker:
-  cron: "*/5 * * * *"
+  cron: "*/1 * * * *"
   class: "RedditWorker"
   queue: default
 

@@ -19,7 +19,7 @@ gem 'bourbon'
 gem "font-awesome-rails"
 gem "materialize-sass"
 gem "sidekiq-cron"
-gem "sentimentalizer"
+# gem "sentimentalizer"
 
 group :development, :test do
   gem 'byebug'
